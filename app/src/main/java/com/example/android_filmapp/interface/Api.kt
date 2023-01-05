@@ -1,5 +1,6 @@
 package com.example.android_filmapp.`interface`
 
+import com.example.android_filmapp.modeldata.MovieDetailData
 import com.example.android_filmapp.modeldata.SearchData
 import retrofit2.Call
 import retrofit2.http.GET
@@ -14,7 +15,7 @@ interface Api {
 
     @GET("/")
     fun getDetailMovie(
-        @Query("i") title:String,
+        @Query("i") title:String?,
         @Query("apikey") apikey:String,
-    )
+    ):Call<MovieDetailData>
 }

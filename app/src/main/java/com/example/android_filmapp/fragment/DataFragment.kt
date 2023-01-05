@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android_filmapp.Adapter.MovieAdapter
 import com.example.android_filmapp.IntanceClient.RClient
@@ -43,6 +44,10 @@ class DataFragment : Fragment() {
         val bundle=arguments
         val s=bundle?.getString("searchmovie")
         val apikey="6690459f"
+
+        binding.progressBar.visibility
+
+
         RClient.instances.getMovies(s,apikey).enqueue(object : Callback<SearchData> {
             override fun onResponse(call: Call<SearchData>, response: Response<SearchData>) {
             //    val  responseCode=response.code()
@@ -52,8 +57,10 @@ class DataFragment : Fragment() {
                     response.body()?.let{list.addAll(it.data)}
                     val adapter=MovieAdapter(list,requireContext());
                     binding.rvData.adapter=adapter;
+                    binding.progressBar.isVisible=false
                 }else{
                     Toast.makeText(context,"Movie not found",Toast.LENGTH_LONG).show()
+                    binding.progressBar.isVisible=false
                 }
 
             }
