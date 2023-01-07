@@ -40,6 +40,7 @@ class DataFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvData.setHasFixedSize(true)
+
         binding.rvData.layoutManager=LinearLayoutManager(context)
         val bundle=arguments
         val s=bundle?.getString("searchmovie")

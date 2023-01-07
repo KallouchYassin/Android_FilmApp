@@ -8,10 +8,11 @@ import androidx.room.TypeConverters
 import com.example.android_filmapp.dao.MovieDao
 import com.example.android_filmapp.modeldata.Movie
 import com.example.android_filmapp.modeldata.MovieData
+import com.example.android_filmapp.modeldata.MovieDetailData
 import com.example.android_filmapp.modeldata.SearchData
 
 
-@Database(entities = [MovieData::class],version = 1)
+@Database(entities = [MovieDetailData::class],version = 2, exportSchema = false)
 
 abstract class MovieDatabase: RoomDatabase() {
 
