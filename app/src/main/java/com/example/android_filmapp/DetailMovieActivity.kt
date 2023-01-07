@@ -1,5 +1,6 @@
 package com.example.android_filmapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -14,9 +15,11 @@ import retrofit2.Response
 class DetailMovieActivity : AppCompatActivity() {
     private lateinit var binding:ActivityDetailMovieBinding
     var b:Bundle?=null
+
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      binding= ActivityDetailMovieBinding.inflate(layoutInflater)
+      binding= ActivityDetailMovieBinding.inflate(layoutInflater);
         setContentView(binding.root)
         b=intent.extras
         val i=b?.getString("imdbid")

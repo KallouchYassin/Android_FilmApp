@@ -9,24 +9,65 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-      android:orientation="horizontal"
+      android:orientation="vertical"
       android:layout_marginHorizontal="10dp"
       app:layout_constraintEnd_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+
       android:layout_marginTop="5dp"
       android:id="@+id/ly_input">
-<EditText
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:padding="10dp"
+            android:text="Search for a movie"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+       <androidx.cardview.widget.CardView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           app:cardCornerRadius="10dp"
+           app:cardElevation="10dp">
+
+
+
+
+
+
+       <EditText
+    android:layout_marginTop="15dp"
     android:layout_width="300dp"
+           android:paddingBottom="10dp"
+           android:paddingLeft="10dp"
     android:layout_height="wrap_content"
+    android:queryBackground="@color/transparent"
+    android:background="@drawable/search_bg"
+    android:theme="@style/ThemeOverlay.Search"
+    android:iconifiedByDefault="false"
 android:id="@+id/search_bar"
    android:hint="Search Title movie..."/>
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-         android:text="Search"
-         android:layout_gravity="center_vertical"
-         android:id="@+id/btn_serach"/>
+
+       </androidx.cardview.widget.CardView>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="search"
+           android:paddingBottom="10dp"
+           android:layout_gravity="center_vertical"
+           android:id="@+id/btn_serach"/>
+       </LinearLayout>
    </LinearLayout>
 
    <FrameLayout
