@@ -1,6 +1,7 @@
 package com.example.android_filmapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -16,17 +17,27 @@ import kotlinx.coroutines.launch
 
 class MainActivity() : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
-    private lateinit var appDb : MovieDatabase
-    lateinit var movie : ArrayList<MovieDetailData>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        binding =ActivityMainBinding.inflate(layoutInflater);
-        movie= ArrayList<MovieDetailData>();
-        appDb= MovieDatabase.getDatabase(this);
         setContentView(binding.root);
+        binding.bottomNav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.liked -> {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                // Add other navigation items here
+            }
+            false
+        }
 
 
-getMovies()
+
+
+
+
         binding.btnSerach.setOnClickListener {
             showFragment();
         }
@@ -35,37 +46,6 @@ getMovies()
 
 
 
-    private  fun  getMovies() {
-
-
-        GlobalScope.launch {
-
-
-            addToLayout(appDb.movieDao().getAll() as ArrayList<MovieDetailData>)
-
-        }
-
-
-
-    }
-    private fun addToLayout(movie:ArrayList<MovieDetailData>)
-    {
-        
-        for (element in movie) {
-            val textView = TextView(this)
-
-            // Set the text of the TextView
-            textView.text = element.Title;
-
-            // Add the TextView to the layout
-
-
-            binding.root.addView(textView);
-
-        }
-
-
-    }
 
 
     private fun showFragment() {

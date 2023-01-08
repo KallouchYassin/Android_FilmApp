@@ -7,7 +7,6 @@ import com.bumptech.glide.Glide
 import com.example.android_filmapp.IntanceClient.RClient
 import com.example.android_filmapp.database.MovieDatabase
 import com.example.android_filmapp.databinding.ActivityDetailMovieBinding
-import com.example.android_filmapp.databinding.ActivityMainBinding
 import com.example.android_filmapp.modeldata.MovieDetailData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -62,6 +61,7 @@ class DetailMovieActivity : AppCompatActivity() {
     private fun addToFav(body: MovieDetailData?) {
         GlobalScope.launch(Dispatchers.IO) {
             if (body?.let { appDb.movieDao().getById(it.Title)} !=null ) {
+                binding.imgToolbarBtnFav.setBackgroundResource(R.drawable.btn_bg3);
                     return@launch;
             }else{
                 binding.imgToolbarBtnFav.setBackgroundResource(R.drawable.btn_bg3);

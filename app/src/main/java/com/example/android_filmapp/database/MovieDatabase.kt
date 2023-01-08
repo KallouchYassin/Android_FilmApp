@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.android_filmapp.dao.MovieDao
+import com.example.android_filmapp.fragment.LikedDataFragment
 import com.example.android_filmapp.modeldata.Movie
 import com.example.android_filmapp.modeldata.MovieData
 import com.example.android_filmapp.modeldata.MovieDetailData

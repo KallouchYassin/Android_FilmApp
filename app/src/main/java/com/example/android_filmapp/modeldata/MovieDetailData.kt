@@ -10,7 +10,8 @@ data class MovieDetailData(
     val Title:String,
     @SerializedName("Released") val Release:String,
     @SerializedName("Poster") val poster:String,
-    @SerializedName("Plot") val plot:String
+    @SerializedName("Plot") val plot:String,
+    @SerializedName("imdbID") val idmovie:String
 
 
 )
