@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gilroy_bold"
                 android:paddingStart="10dp"
-                android:text="Plot"
+                android:text="@string/plot"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 

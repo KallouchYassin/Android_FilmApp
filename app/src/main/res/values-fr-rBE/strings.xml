@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application_android</string>
+    <string name="search">chercher</string>
+    <string name="liked">aimée</string>
+    <string name="list">liste</string>
+    <string name="plot">Resumé</string>
+    <string name="search_for">Chercher un film</string>
+    <string name="List_of">Liste de film aimée</string>
+    <string name="Search_title">Chercher un film avec titre...</string>
+
+</resources>

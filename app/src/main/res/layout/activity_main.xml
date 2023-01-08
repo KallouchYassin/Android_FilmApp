@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/gilroy_bold"
             android:padding="10dp"
-            android:text="Search for a movie"
+            android:text="@string/search_for"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -50,6 +50,7 @@
     android:layout_marginTop="1dp"
     android:layout_width="300dp"
            android:paddingBottom="10dp"
+
            android:paddingLeft="10dp"
     android:layout_height="wrap_content"
     android:queryBackground="@color/transparent"
@@ -57,14 +58,15 @@
     android:theme="@style/ThemeOverlay.Search"
     android:iconifiedByDefault="false"
 android:id="@+id/search_bar"
-   android:hint="Search Title movie..."/>
+   android:hint="@string/Search_title"/>
 
        </androidx.cardview.widget.CardView>
        <Button
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:background="@drawable/ic_baseline_manage_search_24"
+           android:background="@drawable/search_bg"
            android:paddingBottom="10dp"
+           android:text="@string/search"
            android:layout_gravity="center_vertical"
            android:id="@+id/btn_serach"/>
        </LinearLayout>

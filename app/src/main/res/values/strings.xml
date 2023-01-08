@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Android_FilmApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">search</string>
+    <string name="liked">liked</string>
+    <string name="list">list</string>
+    <string name="plot">Plot</string>
+    <string name="search_for">Search a film here</string>
+    <string name="List_of">List of liked films</string>
+    <string name="Search_title">Search a Title of film</string>
+
+
 </resources>
