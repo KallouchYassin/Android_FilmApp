@@ -15,6 +15,7 @@ import com.example.android_filmapp.modeldata.SearchData
 
 @Database(entities = [MovieDetailData::class],version = 2, exportSchema = false)
 
+
 abstract class MovieDatabase: RoomDatabase() {
 
     abstract fun movieDao() : MovieDao

@@ -2,16 +2,13 @@ package com.example.android_filmapp
 
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.android_filmapp.database.MovieDatabase
 import com.example.android_filmapp.modeldata.MovieDetailData
 import junit.framework.Assert.assertEquals
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
 class DatabaseTest {
     private lateinit var database: MovieDatabase
 
