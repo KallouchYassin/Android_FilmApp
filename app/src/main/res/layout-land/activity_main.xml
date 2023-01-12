@@ -66,9 +66,8 @@ android:id="@+id/search_bar"
        <Button
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="@string/search"
-           android:layout_marginTop="7dp"
-           android:background="@drawable/search_bg"
+           android:layout_marginTop="17dp"
+           android:background="@drawable/ic_baseline_youtube_searched_for_24"
            android:paddingBottom="10dp"
            android:layout_gravity="center_vertical"
            android:id="@+id/btn_serach"/>

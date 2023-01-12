@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"  >
 
-    <item android:title="Liked"
+    <item android:title="@string/liked"
         android:id="@+id/liked"
         android:icon="@drawable/ic_baseline_person_24"/>
-    <item android:title="Search"
+    <item android:title="@string/search"
         android:id="@+id/search"
         android:icon="@drawable/ic_baseline_manage_search_24"/>
 

@@ -26,11 +26,12 @@ class MainActivity() : AppCompatActivity() {
                 R.id.liked -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
+
                     return@setOnNavigationItemSelectedListener true
                 }
                 // Add other navigation items here
             }
-            false
+            true
         }
 
 

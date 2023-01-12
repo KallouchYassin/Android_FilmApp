@@ -13,20 +13,17 @@ import kotlinx.coroutines.launch
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
-    private lateinit var appDb: MovieDatabase
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater);
         setContentView(binding.root);
-        appDb = MovieDatabase.getDatabase(this);
         getMovies()
         binding.bottomNavHome.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.search -> {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    return@setOnNavigationItemSelectedListener true
+                    return@setOnNavigationItemSelectedListener false
                 }
 
                 // Add other navigation items here

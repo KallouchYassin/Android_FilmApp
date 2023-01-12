@@ -64,9 +64,10 @@ android:id="@+id/search_bar"
        <Button
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:background="@drawable/search_bg"
+           android:background="@drawable/ic_baseline_youtube_searched_for_24"
+           android:queryBackground="@color/transparent"
            android:paddingBottom="10dp"
-           android:text="@string/search"
+
            android:layout_gravity="center_vertical"
            android:id="@+id/btn_serach"/>
        </LinearLayout>
